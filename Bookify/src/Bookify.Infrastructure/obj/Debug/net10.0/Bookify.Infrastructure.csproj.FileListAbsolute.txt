@@ -1,0 +1,17 @@
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.AssemblyInfo.cs
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Infrastructure.deps.json
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Infrastructure.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Infrastructure.pdb
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Application.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Domain.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Application.pdb
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\bin\Debug\net10.0\Bookify.Domain.pdb
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify..D02210A3.Up2Date
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\refint\Bookify.Infrastructure.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.pdb
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\ref\Bookify.Infrastructure.dll

@@ -1,0 +1,11 @@
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\bin\Debug\net10.0\Bookify.Domain.deps.json
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\bin\Debug\net10.0\Bookify.Domain.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\bin\Debug\net10.0\Bookify.Domain.pdb
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.AssemblyInfoInputs.cache
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.AssemblyInfo.cs
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.csproj.CoreCompileInputs.cache
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\refint\Bookify.Domain.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.pdb
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\ref\Bookify.Domain.dll

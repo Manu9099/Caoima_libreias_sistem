@@ -1,0 +1,6 @@
+{
+  "Bookify.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\manuc\\OneDrive\\Desktop\\Caoima_libreias\\Bookify\\src\\Bookify.Application",
+  "Bookify.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\manuc\\OneDrive\\Desktop\\Caoima_libreias\\Bookify\\src\\Bookify.Domain",
+  "Bookify.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\manuc\\OneDrive\\Desktop\\Caoima_libreias\\Bookify\\src\\Bookify.Infrastructure",
+  "Bookify.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\manuc\\OneDrive\\Desktop\\Caoima_libreias\\Bookify\\src\\Bookify.WebApi"
+}
