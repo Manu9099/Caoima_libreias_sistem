@@ -438,3 +438,4 @@ C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.WebApi.Int
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.WebApi.IntegrationTests\obj\Debug\net10.0\Bookify.WebApi.IntegrationTests.pdb
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.WebApi.IntegrationTests\obj\Debug\net10.0\Bookify.WebApi.IntegrationTests.genruntimeconfig.cache
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.WebApi.IntegrationTests\obj\Debug\net10.0\ref\Bookify.WebApi.IntegrationTests.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.WebApi.IntegrationTests\obj\Debug\net10.0\Bookify.WebApi.IntegrationTests.sourcelink.json

@@ -116,3 +116,4 @@ C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.Applicatio
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.Application.UnitTests\obj\Debug\net10.0\Bookify.Application.UnitTests.pdb
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.Application.UnitTests\obj\Debug\net10.0\Bookify.Application.UnitTests.genruntimeconfig.cache
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.Application.UnitTests\obj\Debug\net10.0\ref\Bookify.Application.UnitTests.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\tests\Bookify.Application.UnitTests\obj\Debug\net10.0\Bookify.Application.UnitTests.sourcelink.json

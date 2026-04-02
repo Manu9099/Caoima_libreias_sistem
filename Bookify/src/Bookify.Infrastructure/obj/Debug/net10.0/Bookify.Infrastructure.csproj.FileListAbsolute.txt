@@ -15,3 +15,4 @@ C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructu
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\refint\Bookify.Infrastructure.dll
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.pdb
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\ref\Bookify.Infrastructure.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Infrastructure\obj\Debug\net10.0\Bookify.Infrastructure.sourcelink.json

@@ -55,7 +55,7 @@ if (app.Environment.IsDevelopment())
 //     options.RoutePrefix = "swagger";
 // });
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
 

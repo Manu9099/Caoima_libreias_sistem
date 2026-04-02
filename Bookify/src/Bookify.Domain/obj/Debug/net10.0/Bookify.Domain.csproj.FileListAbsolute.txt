@@ -9,3 +9,4 @@ C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\D
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\refint\Bookify.Domain.dll
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.pdb
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\ref\Bookify.Domain.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.Domain\obj\Debug\net10.0\Bookify.Domain.sourcelink.json

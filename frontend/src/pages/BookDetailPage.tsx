@@ -1,15 +1,27 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { BookViewer } from "../components/books/BookViewer";
+import { FavoriteButton } from "../components/books/FavoriteButton";
 import { ErrorState } from "../components/ui/ErrorState";
 import { LoadingState } from "../components/ui/LoadingState";
 import { useBookContent } from "../hooks/useBookContent";
 import { useBookDetail } from "../hooks/useBookDetail";
+import { useReadingHistory } from "../hooks/useReadingHistory";
+import { useReadingProgress } from "../hooks/useReadingProgress";
 
 export function BookDetailPage() {
   const { id = "" } = useParams();
 
   const bookQuery = useBookDetail(id);
   const contentQuery = useBookContent(id);
+  const { addToHistory } = useReadingHistory();
+  const progress = useReadingProgress(Number(id));
+
+  useEffect(() => {
+    if (bookQuery.data) {
+      addToHistory(bookQuery.data);
+    }
+  }, [bookQuery.data, addToHistory]);
 
   if (!id) {
     return <ErrorState message="No se encontró el identificador del libro." />;
@@ -57,14 +69,18 @@ export function BookDetailPage() {
           </div>
 
           <div className="flex-1 space-y-4">
-            <div>
-              <h1 className="text-3xl font-bold text-slate-900">{book.title}</h1>
-              <p className="mt-2 text-slate-600">
-                {book.authors.map((author) => author.name).join(", ") || "Autor desconocido"}
-              </p>
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h1 className="text-3xl font-bold text-slate-900">{book.title}</h1>
+                <p className="mt-2 text-slate-600">
+                  {book.authors.map((author) => author.name).join(", ") || "Autor desconocido"}
+                </p>
+              </div>
+
+              <FavoriteButton book={book} />
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-3">
               <div className="rounded-2xl bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Idiomas</p>
                 <p className="mt-1 text-sm text-slate-800">
@@ -75,6 +91,13 @@ export function BookDetailPage() {
               <div className="rounded-2xl bg-slate-50 p-4">
                 <p className="text-xs uppercase tracking-wide text-slate-500">Descargas</p>
                 <p className="mt-1 text-sm text-slate-800">{book.downloadCount}</p>
+              </div>
+
+              <div className="rounded-2xl bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-wide text-slate-500">Tu progreso</p>
+                <p className="mt-1 text-sm text-slate-800">
+                  {progress?.percentage ?? 0}%
+                </p>
               </div>
             </div>
 
@@ -103,7 +126,7 @@ export function BookDetailPage() {
         </div>
       </section>
 
-      <BookViewer html={content.html} />
+      <BookViewer bookId={book.id} html={content.html} />
     </div>
   );
 }

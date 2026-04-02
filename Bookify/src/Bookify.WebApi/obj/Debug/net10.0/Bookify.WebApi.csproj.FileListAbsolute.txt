@@ -49,3 +49,4 @@ C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.WebApi\obj\D
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.WebApi\obj\Debug\net10.0\Bookify.WebApi.pdb
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.WebApi\obj\Debug\net10.0\Bookify.WebApi.genruntimeconfig.cache
 C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.WebApi\obj\Debug\net10.0\ref\Bookify.WebApi.dll
+C:\Users\manuc\OneDrive\Desktop\Caoima_libreias\Bookify\src\Bookify.WebApi\obj\Debug\net10.0\Bookify.WebApi.sourcelink.json

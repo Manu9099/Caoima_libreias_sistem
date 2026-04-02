@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
 import type { BookListItem } from "../../types/book";
+import type { LocalBookItem } from "../../utils/localLibrary";
+import { FavoriteButton } from "./FavoriteButton";
 
 type Props = {
-  book: BookListItem;
+  book: BookListItem | LocalBookItem;
 };
 
 export function BookCard({ book }: Props) {
   return (
     <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-      <div className="-aspect-[3/4] bg-slate-100">
+      <div className="relative -aspect-[3/4] bg-slate-100">
+        <div className="absolute right-3 top-3 z-10">
+          <FavoriteButton book={book} />
+        </div>
+
         {book.coverUrl ? (
           <img
             src={book.coverUrl}
@@ -39,6 +45,12 @@ export function BookCard({ book }: Props) {
         {!book.hasHtmlContent && (
           <div className="rounded-xl bg-amber-50 px-3 py-2 text-xs text-amber-700">
             Este libro podría abrirse en modo texto plano.
+          </div>
+        )}
+
+        {"progress" in book && typeof book.progress === "number" && book.progress > 0 && (
+          <div className="rounded-xl bg-sky-50 px-3 py-2 text-xs text-sky-700">
+            Progreso guardado: {book.progress}%
           </div>
         )}
 

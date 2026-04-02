@@ -46,3 +46,43 @@ export type BookContent = {
   contentType: string;
   html: string;
 };
+
+
+
+export type OpenLibraryBookListItem = {
+  workId: string;
+  title: string;
+  author: string;
+  coverUrl?: string | null;
+  firstPublishYear?: number | null;
+  languages: string[];
+  subjects: string[];
+  editionCount: number;
+  hasFullText: boolean;
+  isReadableOnline: boolean;
+  isBorrowable: boolean;
+};
+
+export type OpenLibraryBookDetail = {
+  workId: string;
+  title: string;
+  authors: string[];
+  description?: string | null;
+  coverUrl?: string | null;
+  subjects: string[];
+  languages: string[];
+  firstPublishYear?: number | null;
+  editionCount: number;
+  hasFullText: boolean;
+};
+
+export type OpenLibraryReadOptions = {
+  workId: string;
+  canReadOnline: boolean;
+  canBorrow: boolean;
+  availabilityStatus?: string | null;
+  readUrl?: string | null;
+  borrowUrl?: string | null;
+  candidateEditionIds: string[];
+  isbns: string[];
+};

@@ -1,10 +1,15 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { BookList } from "../components/books/BookList";
+import { BookShelf } from "../components/books/BookShelf";
 import { SearchBar } from "../components/books/SearchBar";
 import { EmptyState } from "../components/ui/EmptyState";
 import { ErrorState } from "../components/ui/ErrorState";
 import { LoadingState } from "../components/ui/LoadingState";
+import { useFavorites } from "../hooks/useFavorites";
 import { useBooksSearch } from "../hooks/useBooksSearch";
+import { useDebouncedValue } from "../hooks/useDebouncedValue";
+import { useReadingHistory } from "../hooks/useReadingHistory";
 
 const SORT_OPTIONS = [
   { value: "title_asc", label: "Título A-Z" },
@@ -17,11 +22,47 @@ const SORT_OPTIONS = [
   { value: "downloads_asc", label: "Menos descargados" },
 ];
 
+function parsePage(value: string | null) {
+  const parsed = Number(value ?? "1");
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
+}
+
 export function HomePage() {
-  const [inputValue, setInputValue] = useState("harry");
-  const [query, setQuery] = useState("harry");
-  const [page, setPage] = useState(1);
-  const [sort, setSort] = useState("title_asc");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const query = searchParams.get("q") ?? "";
+  const page = parsePage(searchParams.get("page"));
+  const sort = searchParams.get("sort") ?? "title_asc";
+
+  const [inputValue, setInputValue] = useState(query);
+  const debouncedInput = useDebouncedValue(inputValue, 500);
+
+  const { favorites } = useFavorites();
+  const { history } = useReadingHistory();
+
+  useEffect(() => {
+    setInputValue(query);
+  }, [query]);
+
+  useEffect(() => {
+    const trimmed = debouncedInput.trim();
+
+    if (trimmed === query) return;
+
+    const next = new URLSearchParams(searchParams);
+
+    if (trimmed) {
+      next.set("q", trimmed);
+      next.set("page", "1");
+    } else {
+      next.delete("q");
+      next.delete("page");
+    }
+
+    next.set("sort", sort);
+
+    setSearchParams(next, { replace: true });
+  }, [debouncedInput, query, searchParams, setSearchParams, sort]);
 
   const booksQuery = useBooksSearch(query, page, sort);
 
@@ -34,15 +75,35 @@ export function HomePage() {
 
   const handleSearch = () => {
     const trimmed = inputValue.trim();
+    const next = new URLSearchParams(searchParams);
 
-    if (!trimmed) {
-      setPage(1);
-      setQuery("");
-      return;
+    if (trimmed) {
+      next.set("q", trimmed);
+      next.set("page", "1");
+    } else {
+      next.delete("q");
+      next.delete("page");
     }
 
-    setPage(1);
-    setQuery(trimmed);
+    next.set("sort", sort);
+    setSearchParams(next);
+  };
+
+  const handleSortChange = (value: string) => {
+    const next = new URLSearchParams(searchParams);
+    next.set("sort", value);
+
+    if (query.trim()) {
+      next.set("page", "1");
+    }
+
+    setSearchParams(next);
+  };
+
+  const handlePageChange = (nextPage: number) => {
+    const next = new URLSearchParams(searchParams);
+    next.set("page", String(nextPage));
+    setSearchParams(next);
   };
 
   return (
@@ -50,7 +111,7 @@ export function HomePage() {
       <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
         <h1 className="text-3xl font-bold text-slate-900">Explora libros</h1>
         <p className="mt-2 text-sm text-slate-600">
-          Busca títulos, autores y abre el lector HTML embebido.
+          Busca títulos, autores y continúa donde te quedaste.
         </p>
 
         <div className="mt-5 space-y-4">
@@ -63,10 +124,7 @@ export function HomePage() {
           <div className="flex justify-end">
             <select
               value={sort}
-              onChange={(e) => {
-                setPage(1);
-                setSort(e.target.value);
-              }}
+              onChange={(e) => handleSortChange(e.target.value)}
               className="rounded-2xl border border-slate-300 bg-white px-4 py-2 text-sm"
             >
               {SORT_OPTIONS.map((option) => (
@@ -79,10 +137,26 @@ export function HomePage() {
         </div>
       </section>
 
+      {favorites.length > 0 && (
+        <BookShelf
+          title="Tus favoritos"
+          description="Guardados temporalmente en este navegador."
+          items={favorites.slice(0, 4)}
+        />
+      )}
+
+      {history.length > 0 && (
+        <BookShelf
+          title="Seguir leyendo"
+          description="Historial reciente con progreso guardado."
+          items={history.slice(0, 4)}
+        />
+      )}
+
       {isQueryEmpty && (
         <EmptyState
           title="Escribe algo para buscar"
-          description="Prueba con un título, autor o palabra clave como Frankenstein, Alice o Sherlock."
+          description="Prueba con Frankenstein, Alice, Sherlock o Pride."
         />
       )}
 
@@ -106,7 +180,7 @@ export function HomePage() {
           items={booksQuery.data.items}
           page={booksQuery.data.page}
           totalPages={booksQuery.data.totalPages}
-          onPageChange={setPage}
+          onPageChange={handlePageChange}
         />
       )}
     </div>
